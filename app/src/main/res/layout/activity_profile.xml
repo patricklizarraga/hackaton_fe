@@ -39,7 +39,9 @@
         app:layout_constraintHorizontal_bias="1.0"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/letterTextView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleNavigation="Profile">
 
+    </com.jretuerto.bootcamp.trabajofinal.util.component.NavigationViewComponent>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
