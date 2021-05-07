@@ -19,11 +19,11 @@ class MainActivity : BaseActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root, R.id.claMain)
 
-        this.getSupportActionBar()!!.hide();
-
         binding.iniciarButton.setOnClickListener {
-            val intent = Intent(this, NavigatorActivity::class.java)
+            val intent = Intent(this, ProfileActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
+
         }
     }
 }

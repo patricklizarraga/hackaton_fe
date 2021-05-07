@@ -8,11 +8,25 @@
     <attr name="button" format="string" />
     <attr name="image" format="reference" />
 
+    <attr name="titleTextView" format="string" />
+    <attr name="hintTextView" format="string" />
+    <attr name="titleNavigation" format="string" />
+
 
     <declare-styleable name="LoadingView">
         <attr name="title" />
     </declare-styleable>
 
+    <declare-styleable name="TextView">
+        <attr name="titleTextView" />
+    </declare-styleable>
+    <declare-styleable name="EditText">
+        <attr name="hintTextView" />
+    </declare-styleable>
+
+    <declare-styleable name="NavigationTextView">
+        <attr name="titleNavigation" />
+    </declare-styleable>
 
 
 </resources>

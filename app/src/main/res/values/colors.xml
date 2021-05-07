@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_menu">#e5e5e5</color>
     <color name="naranja">#ef534f</color>
+    <color name="primary_blue">#082D87</color>
+    <color name="primary_button">#FF9052</color>
 </resources>

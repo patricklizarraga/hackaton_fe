@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/pokeapi"
+        android:src="@drawable/logo_bcp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -22,11 +22,8 @@
         android:id="@+id/iniciar_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Iniciar"
-        android:textColor="#fff"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        android:background="@drawable/round_button"
+        android:text="@string/button_login_tille"
+        style="@style/primary_button"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline2">
@@ -58,30 +55,25 @@
         app:layout_constraintGuide_percent="0.95"
         android:orientation="horizontal" />
 
-    <TextView
+    <com.jretuerto.bootcamp.trabajofinal.util.component.TextViewComponent
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="16dp"
-        android:text="Bienvenidos"
         android:textColor="#ef534f"
-        android:textSize="26sp"
-        android:textStyle="bold"
+        app:titleTextView="@string/name_user_text_title"
+        app:hintTextView="@string/name_user_text_hint"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline2" />
 
-    <TextView
+    <com.jretuerto.bootcamp.trabajofinal.util.component.TextViewComponent
         android:id="@+id/textView2"
         android:layout_width="0sp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_marginBottom="64dp"
-        android:text="Toda la información de Pokemon en un solo lugar"
-        android:lines="2"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        app:titleTextView="@string/document_user_title"
+        app:hintTextView="@string/document_user_text_hint"
         app:layout_constraintBottom_toTopOf="@+id/iniciar_button"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.465"
