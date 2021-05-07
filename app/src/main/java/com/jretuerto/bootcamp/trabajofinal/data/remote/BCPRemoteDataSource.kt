@@ -9,7 +9,6 @@ class BCPRemoteDataSource @Inject constructor(
 
     suspend fun searchPokemonById(pokemonId: String) = safeApiCall { service.searchPokemonById(pokemonId) }
     suspend fun searchPokemonByName(pokemonName: String) = safeApiCall { service.searchPokemonByName(pokemonName) }
-
 }
 
 

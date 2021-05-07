@@ -1,6 +1,6 @@
 package pe.com.bootcamp.jretuerto.data.repository
 
-import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.PokemonResponse
+import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.pokemon.PokemonResponse
 import pe.com.bootcamp.jretuerto.data.remote.BCPRemoteDataSource
 import pe.com.bootcamp.jretuerto.data.remote.Result
 
@@ -11,7 +11,6 @@ class BCPRepository @Inject constructor(
 ) {
     suspend fun searchPokemonById(pokemonId: String): Result<PokemonResponse> = remoteDataSource.searchPokemonById(pokemonId)
     suspend fun searchPokemonByName(pokemonName: String): Result<PokemonResponse> = remoteDataSource.searchPokemonByName(pokemonName)
-
 }
 
 

@@ -14,7 +14,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.jretuerto.bootcamp.trabajofinal.R
-import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.PokemonResponse
+import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.pokemon.PokemonResponse
 import com.jretuerto.bootcamp.trabajofinal.databinding.FragmentSearchByNameBinding
 import com.jretuerto.bootcamp.trabajofinal.ui.model.DashboardSearchModel
 import dagger.hilt.android.AndroidEntryPoint
