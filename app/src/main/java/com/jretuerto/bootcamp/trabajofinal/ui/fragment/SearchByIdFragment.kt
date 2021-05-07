@@ -1,9 +1,11 @@
 package com.jretuerto.bootcamp.trabajofinal.ui.fragment
 
 import android.content.Context
+import android.opengl.Visibility
 import android.os.Bundle
 import android.text.InputType
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -14,7 +16,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.jretuerto.bootcamp.trabajofinal.R
-import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.pokemon.PokemonResponse
+import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.PokemonResponse
 import com.jretuerto.bootcamp.trabajofinal.databinding.FragmentSearchByIdBinding
 import com.jretuerto.bootcamp.trabajofinal.ui.model.DashboardSearchModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -80,7 +82,7 @@ class SearchByIdFragment : Fragment(R.layout.fragment_search_by_id) {
 
         if (!response.id.equals("")) {
             searchBinding!!.dashboard.getNamePokemon().text = response.name
-            Glide.with(this).load(response.sprites.front_default).into(searchBinding!!.dashboard.getImagePokemon());
+            Glide.with(this).load(response.sprites.front_default).into(searchBinding!!.dashboard.getImagePokemon())
 
             searchBinding!!.dashboard.getImagePokemon().visibility = View.VISIBLE
             searchBinding!!.dashboard.getNamePokemon().visibility = View.VISIBLE
@@ -92,7 +94,7 @@ class SearchByIdFragment : Fragment(R.layout.fragment_search_by_id) {
         searchBinding!!.dashboard.getImagePokemon().visibility = View.INVISIBLE
         searchBinding!!.dashboard.getNamePokemon().visibility = View.INVISIBLE
 
-        Toast.makeText(getContext(), it, Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
     }
 
     private fun isEditTextEmpty(editText: EditText) : Boolean {
@@ -100,7 +102,7 @@ class SearchByIdFragment : Fragment(R.layout.fragment_search_by_id) {
         var texto = editText.text.toString().trim()
 
         if (TextUtils.isEmpty(texto)){
-            editText.setError("Campo requerido")
+            editText.error = "Campo requerido"
             editText.requestFocus()
             return true
         } else {
@@ -110,6 +112,6 @@ class SearchByIdFragment : Fragment(R.layout.fragment_search_by_id) {
 
     fun hideKeyboard(view: View) {
         val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(view.getWindowToken(), 0)
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }

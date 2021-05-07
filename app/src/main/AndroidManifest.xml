@@ -13,9 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BootcampTrabajoFinal"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".ui.InformationActivity">
         <activity android:name=".ui.ProfileActivity"></activity>
+        <activity android:name=".ui.InformationActivity"></activity>
         <activity
             android:name=".ui.NavigatorActivity"
             android:label="@string/title_activity_navigator" />

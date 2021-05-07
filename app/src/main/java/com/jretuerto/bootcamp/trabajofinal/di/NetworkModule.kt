@@ -33,6 +33,27 @@ object NetworkModule {
     ): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
+            //.addInterceptor(AuthInterceptor(BuildConfig.API_KEY))
+                /*
+            .addInterceptor { chain ->
+
+                val token = Constants.API_TOKEN
+                val typeToken = Constants.TIPO_TOKEN
+
+                if (Constants.API_TOKEN!!.isNotEmpty()) {
+                    val newRequest = chain.request().newBuilder()
+                        .addHeader(
+                            "Authorization",
+                            "$typeToken $token"
+                        )
+                        .build()
+                    chain.proceed(newRequest)
+                } else {
+                    val newRequest = chain.request().newBuilder().build()
+                    chain.proceed(newRequest)
+                }
+            }
+                 */
             .readTimeout(Constants.REST_TIMEOUT, TimeUnit.SECONDS)
             .connectTimeout(Constants.REST_TIMEOUT, TimeUnit.SECONDS)
             .writeTimeout(Constants.REST_TIMEOUT, TimeUnit.SECONDS)
