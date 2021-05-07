@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BootcampTrabajoFinal"
         android:usesCleartextTraffic="true">
-
+        <activity android:name=".ui.ProfileActivity"></activity>
         <activity
             android:name=".ui.NavigatorActivity"
-            android:label="@string/title_activity_navigator"></activity>
+            android:label="@string/title_activity_navigator" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

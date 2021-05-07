@@ -26,4 +26,20 @@
     <string name="search_name_hint">Escribir Nombre Pokemon</string>
 
 
+    <!--
+     TextView Component
+    -->
+    <string name="generic_title">Title</string>
+    <string name="generic_hint">Placeholder</string>
+
+    <!--
+     Login Activity
+    -->
+    <string name="name_user_text_title">Nombre y Apellidos</string>
+    <string name="document_user_title">Documento de Identidad</string>
+    <string name="name_user_text_hint">Ingresa tus nombres y apellidos</string>
+    <string name="document_user_text_hint">Ingresa tu DNI</string>
+    <string name="button_login_tille">Ingresar</string>
+
+
 </resources>
