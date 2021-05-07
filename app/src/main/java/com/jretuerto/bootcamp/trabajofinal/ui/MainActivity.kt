@@ -2,14 +2,10 @@ package com.jretuerto.bootcamp.trabajofinal.ui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import com.jretuerto.bootcamp.trabajofinal.R
 import com.jretuerto.bootcamp.trabajofinal.databinding.ActivityMainBinding
-import com.jretuerto.bootcamp.trabajofinal.ui.fragment.SearchByIdFragment
-import com.jretuerto.bootcamp.trabajofinal.ui.fragment.SearchByNameFragment
 import dagger.hilt.android.AndroidEntryPoint
-import pe.com.bootcamp.jretuerto.viewmodel.BCPViewModel
+
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity() {
@@ -29,7 +25,5 @@ class MainActivity : BaseActivity() {
             val intent = Intent(this, NavigatorActivity::class.java)
             startActivity(intent)
         }
-
-
     }
 }

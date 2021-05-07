@@ -1,11 +1,9 @@
 package com.jretuerto.bootcamp.trabajofinal.ui.fragment
 
 import android.content.Context
-import android.opengl.Visibility
 import android.os.Bundle
 import android.text.InputType
 import android.text.TextUtils
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -16,7 +14,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.jretuerto.bootcamp.trabajofinal.R
-import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.PokemonResponse
+import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.pokemon.PokemonResponse
 import com.jretuerto.bootcamp.trabajofinal.databinding.FragmentSearchByIdBinding
 import com.jretuerto.bootcamp.trabajofinal.ui.model.DashboardSearchModel
 import dagger.hilt.android.AndroidEntryPoint

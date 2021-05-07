@@ -1,4 +1,4 @@
-package com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon
+package com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.pokemon
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
