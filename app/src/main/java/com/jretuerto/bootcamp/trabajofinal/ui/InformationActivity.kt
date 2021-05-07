@@ -1,13 +1,12 @@
 package com.jretuerto.bootcamp.trabajofinal.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.EditText
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.jretuerto.bootcamp.trabajofinal.R
 import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.pokemon.answer.Answer
@@ -34,16 +33,26 @@ class InformationActivity() : BaseActivity() {
 
         binding.questionResponseTextView.visibility = View.INVISIBLE
         binding.questionRecyclerView.visibility = View.INVISIBLE
+        binding.ingresoReclamoButton.visibility = View.INVISIBLE
+
+        binding.ingresoReclamoButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+
+        }
 
         binding.questionButton.setOnClickListener {
             if (!isEditTextEmpty(binding.questionEditText)) {
-                Thread({
-                    callApiWatson =
+                Thread {
+                    if (binding.questionEditText?.text?.toString() != null) {
                         WatsonRepository.CallApiWatson(binding.questionEditText!!.text!!.toString())
+                            .also { callApiWatson = it }
 
-                    Log.d("Respuesta: ", callApiWatson)
+                        Log.d("Respuesta: ", callApiWatson)
+                    }
 
-                }).start()
+                }.start()
 
                 Thread.sleep(5000)
 
@@ -61,6 +70,7 @@ class InformationActivity() : BaseActivity() {
 
                 binding.questionRecyclerView.adapter = adapter
 
+                binding.ingresoReclamoButton.visibility = View.VISIBLE
                 binding.questionResponseTextView.visibility = View.VISIBLE
                 binding.questionResponseTextView.text = getAnswers(callApiWatson)[0].question
 

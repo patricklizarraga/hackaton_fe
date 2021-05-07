@@ -5,16 +5,34 @@
     android:id="@+id/profileActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.ProfileActivity">
 
+    <Button
+        android:id="@+id/information_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:text="Información"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_profile" />
+
     <com.jretuerto.bootcamp.trabajofinal.util.component.NavigationViewComponent
+        android:id="@+id/nav_profile"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:titleNavigation="Profile">
 
     </com.jretuerto.bootcamp.trabajofinal.util.component.NavigationViewComponent>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

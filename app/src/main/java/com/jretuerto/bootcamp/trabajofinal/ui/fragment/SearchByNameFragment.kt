@@ -14,7 +14,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.jretuerto.bootcamp.trabajofinal.R
-import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.pokemon.PokemonResponse
+import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.PokemonResponse
 import com.jretuerto.bootcamp.trabajofinal.databinding.FragmentSearchByNameBinding
 import com.jretuerto.bootcamp.trabajofinal.ui.model.DashboardSearchModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -80,7 +80,7 @@ class SearchByNameFragment : Fragment(R.layout.fragment_search_by_name) {
 
         if (!response.id.equals("")) {
             searchBinding!!.dashboard.getNamePokemon().text = response.name
-            Glide.with(this).load(response.sprites.front_default).into(searchBinding!!.dashboard.getImagePokemon());
+            Glide.with(this).load(response.sprites.front_default).into(searchBinding!!.dashboard.getImagePokemon())
 
             searchBinding!!.dashboard.getImagePokemon().visibility = View.VISIBLE
             searchBinding!!.dashboard.getNamePokemon().visibility = View.VISIBLE
@@ -95,7 +95,7 @@ class SearchByNameFragment : Fragment(R.layout.fragment_search_by_name) {
         searchBinding!!.dashboard.getImagePokemon().visibility = View.INVISIBLE
         searchBinding!!.dashboard.getNamePokemon().visibility = View.INVISIBLE
 
-        Toast.makeText(getContext(), it, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
     }
 
     private fun isEditTextEmpty(editText: EditText) : Boolean {
@@ -103,7 +103,7 @@ class SearchByNameFragment : Fragment(R.layout.fragment_search_by_name) {
         var texto = editText.text.toString().trim()
 
         if (TextUtils.isEmpty(texto)){
-            editText.setError("Campo requerido")
+            editText.error = "Campo requerido"
             editText.requestFocus()
             return true
         } else {
@@ -113,6 +113,6 @@ class SearchByNameFragment : Fragment(R.layout.fragment_search_by_name) {
 
     fun hideKeyboard(view: View) {
         val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(view.getWindowToken(), 0)
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
