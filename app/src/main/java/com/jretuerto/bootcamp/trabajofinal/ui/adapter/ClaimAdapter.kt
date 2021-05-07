@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jretuerto.bootcamp.trabajofinal.data.entities.Claim
+import com.jretuerto.bootcamp.trabajofinal.data.entities.ClaimResponse
 import com.jretuerto.bootcamp.trabajofinal.databinding.OptionViewBinding
 import com.jretuerto.bootcamp.trabajofinal.ui.interfaces.IOnEventClick
 
@@ -43,6 +44,11 @@ class ClaimAdapter(
 
     override fun getItemCount(): Int {
         return listClaim.size
+    }
+
+    fun updateItems(items: List<Claim>) {
+        this.listClaim = items
+        notifyDataSetChanged()
     }
 
 }

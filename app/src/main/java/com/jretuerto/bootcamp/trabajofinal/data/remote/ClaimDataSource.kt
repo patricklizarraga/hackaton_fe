@@ -7,7 +7,7 @@ class ClaimDataSource @Inject constructor(
     private val service: ApiService
 ) : BaseDataSource() {
 
-    suspend fun getClaim(customerId: String) = safeApiCall { service.getClaim(customerId) }
+    suspend fun getClaim() = safeApiCall { service.getClaim() }
 
 }
 
