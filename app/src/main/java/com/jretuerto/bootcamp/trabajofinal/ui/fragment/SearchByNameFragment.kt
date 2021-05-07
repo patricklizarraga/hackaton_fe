@@ -55,7 +55,6 @@ class SearchByNameFragment : Fragment(R.layout.fragment_search_by_name) {
     }
 
     private fun setupUI(){
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
         searchBinding!!.dashboard.setTypeDashboard(
             DashboardSearchModel(
