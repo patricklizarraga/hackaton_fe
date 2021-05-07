@@ -5,7 +5,7 @@ package pe.com.bootcamp.jretuerto.util
 object Constants {
 
     //Web Service IP
-    const val BASE_URL = "https://pokeapi.co/api/v2/"
+    const val BASE_URL = "http://bootcamp-claims-app.us-east-1.elasticbeanstalk.com/"
     const val API_TOKEN = "abdnhzodkjyxjmcazs5tgxzfer5ij00pe9ho6g1h"
     const val TIPO_TOKEN = "Bearer"
     const val GENERAL_EMPTY_TEXT = 0

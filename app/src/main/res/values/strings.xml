@@ -41,5 +41,9 @@
     <string name="document_user_text_hint">Ingresa tu DNI</string>
     <string name="button_login_tille">Ingresar</string>
 
+    <!--
+     Login Activity
+    -->
+    <string name="title_claim_list">Mis reclamos</string>
 
 </resources>

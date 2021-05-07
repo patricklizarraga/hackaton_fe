@@ -1,5 +1,6 @@
 package com.jretuerto.bootcamp.rest
 
+import com.jretuerto.bootcamp.trabajofinal.data.entities.ClaimResponse
 import com.jretuerto.bootcamp.trabajofinal.data.entities.pokemon.PokemonResponse
 
 import retrofit2.Response
@@ -12,5 +13,8 @@ interface ApiService {
 
     @GET("pokemon-form/{name}/")
     suspend fun searchPokemonByName(@Path("name") pokemonName: String): Response<PokemonResponse>
+
+    @GET("claims")
+    suspend fun getClaim(): Response<ClaimResponse>
 
 }
